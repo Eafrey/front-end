@@ -1,29 +1,29 @@
 <template>
   <div id="app">
-    <p>ddddd</p>
     <noscript></noscript>
+    <p>Welcome to Eafrey.cn</p>
+    <router-link to="/">Home</router-link> |     
+    <router-link to="/login">Log in</router-link> | 
+    <router-link to="/signup">Sign up</router-link>   
+    <router-view></router-view> 
+    <br>
     <button @click=testEafreyCN>testApi</button>
     <p>{{ testContent }}</p>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
 import axios from "axios";
 
 export default {
   name: "app",
-  components: {
-    HelloWorld
-  },
+  components: {},
   data: function() {
-    return { testContent:  'nullll' };
+    return { testContent: "original text" };
   },
   methods: {
     testEafreyCN() {
-      console.log('clicking')
+      console.log("clicking");
       axios.get("/api/test").then(({ data }) => {
         console.log('testing test api')
         this.testContent = data;
