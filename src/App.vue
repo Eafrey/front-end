@@ -1,35 +1,22 @@
 <template>
   <div id="app">
     <noscript></noscript>
-    <p>Welcome to Eafrey.cn</p>
-    <router-link to="/">Home</router-link> |     
-    <router-link to="/login">Log in</router-link> | 
-    <router-link to="/signup">Sign up</router-link>   
+    <el-menu background-color="#00BFFF" mode="horizontal" router=true text-color='#FFF'>
+      <el-menu-item index="/">Home</el-menu-item>
+      <el-menu-item index="/login">Login</el-menu-item>
+      <el-menu-item index="/Signup">Signup</el-menu-item>
+    </el-menu>
     <router-view></router-view> 
-    <br>
-    <button @click=testEafreyCN>testApi</button>
-    <p>{{ testContent }}</p>
+   
   </div>
 </template>
 
 <script>
-import axios from "axios";
 
 export default {
   name: "app",
   components: {},
-  data: function() {
-    return { testContent: "original text" };
-  },
-  methods: {
-    testEafreyCN() {
-      console.log("clicking");
-      axios.get("/api/test").then(({ data }) => {
-        console.log('testing test api')
-        this.testContent = data;
-      });
-    }
-  }
+  methods: {}
 };
 </script>
 
@@ -40,6 +27,8 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+p {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
 }
 </style>
