@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import { testApi } from "../api/user";
 
 export default {
   name: "Home",
@@ -23,9 +23,7 @@ export default {
       this.$router.push("/signup");
     },
     testEafreyCN() {
-      console.log("clicking");
-      axios.get("/api/test").then(({ data }) => {
-        console.log("testing test api");
+      testApi().then((data) => {
         this.testContent = data;
       });
     }
