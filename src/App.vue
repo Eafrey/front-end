@@ -3,8 +3,6 @@
     <noscript></noscript>
     <el-menu background-color="#00BFFF" mode="horizontal" router=true text-color='#FFF'>
       <el-menu-item index="/">Home</el-menu-item>
-      <el-menu-item index="/login">Login</el-menu-item>
-      <el-menu-item index="/Signup">Signup</el-menu-item>
     </el-menu>
     <router-view></router-view> 
    

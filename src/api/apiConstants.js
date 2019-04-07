@@ -1,3 +1,4 @@
 export default {
-  TEST: "/api/test"
+  TEST: "/api/test",
+  ADD_USER: "api/user",
 };
