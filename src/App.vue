@@ -34,10 +34,6 @@ html {
     text-align: center;
     color: #2c3e50;
     height: 100%;
-    opacity: 0.9;
-    background-image: url(./assets/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
   }
 
   p {

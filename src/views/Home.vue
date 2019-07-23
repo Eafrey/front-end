@@ -1,11 +1,9 @@
 <template>
-<div>
-    <p>Welcome to Eafrey.cn</p>
-    <el-button @click=goToLogin>No account? Go to Sign up.</el-button>
+<div class="container">
     <div>
-        <br>    
+        <div>Welcome to Eafrey.cn</div>
         <el-button @click=testEafreyCN>testApi</el-button>
-        <p>{{ testContent }}</p>
+        <div>{{ testContent }}</div>
     </div>
 </div>
 </template>
@@ -30,3 +28,13 @@ export default {
   }
 };
 </script>
+
+<style lang="scss">
+  .container {
+    opacity: 0.9;
+    background-image: url(../assets/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+  }
+</style>

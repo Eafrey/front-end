@@ -3,6 +3,7 @@ import Vue from "vue";
 import Signup from "../views/user/Signup.vue";
 import Login from "../views/user/Login.vue";
 import Home from "../views/Home.vue";
+import CreateArticle from "../views/admin/CreateArticle.vue"
 
 Vue.use(Router);
 
@@ -12,6 +13,7 @@ export default new Router({
   routes: [
     { path: "/signup", name: "signup", component: Signup },
     { path: "/login", name: "login", component: Login },
+    { path: "/create", name: "create", component: CreateArticle },
     { path: "/", name: "home", component: Home }
   ]
 });
