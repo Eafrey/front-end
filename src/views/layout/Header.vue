@@ -17,34 +17,43 @@
             <el-menu-item index="/login">Header3</el-menu-item>
         </el-menu>
     </div>
-    <router-view></router-view> 
+    <router-view class="content"></router-view> 
     </div>
 </template>
 
 <style lang="scss">
 .container {
   height: 100%;
+  display: flex;
+  flex-direction: column;
   
   .header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 60px;
       display: flex;
       flex-direction: row;
       align-items: center;
       background-color: #409EFF;
+      z-index: $header-z-index;
 
       .title {
           text-align: left;
           font-weight: 600;
           color: $color-text-primary;
           font-size: 32px;
-          padding-left: 20px;
+          margin-left: 20px;
           flex-grow: 1;
           font-weight: 500;
       }
   }
-}
 
-.el-menu.el-menu--horizontal {
-//   border-bottom: none !important;
+  .content {
+      margin-top: 60px;
+      flex-grow: 1;
+  }
 }
 </style>
 

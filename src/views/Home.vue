@@ -30,12 +30,12 @@ export default {
 
 <style lang="scss">
   .container {
-    opacity: 0.9;
+    // opacity: 0.9;
     // background-image: url(../assets/background.jpg);
     // background-repeat: no-repeat;
     // background-size: cover;
     background-color: $background-color-base;
-    height: 100%;
+    // height: 100%;
 
     .debug-info {
       display: flex;
