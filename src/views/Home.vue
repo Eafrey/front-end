@@ -1,7 +1,6 @@
 <template>
 <div class="container">
-    <div>
-        <div>Welcome to Eafrey.cn</div>
+    <div class='debug-info'>
         <el-button @click=testEafreyCN>testApi</el-button>
         <div>{{ testContent }}</div>
     </div>
@@ -32,9 +31,17 @@ export default {
 <style lang="scss">
   .container {
     opacity: 0.9;
-    background-image: url(../assets/background.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
+    // background-image: url(../assets/background.jpg);
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    background-color: $background-color-base;
     height: 100%;
+
+    .debug-info {
+      display: flex;
+      align-items: flex-end;
+      text-align: right;
+      height: 100%;
+    }
   }
 </style>

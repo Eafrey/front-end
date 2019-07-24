@@ -1,19 +1,18 @@
 <template>
   <div id="app">
     <noscript></noscript>
-    <el-menu background-color="#00BFFF95" mode="horizontal" router=true text-color='#FFF'>
-      <el-menu-item index="/">Home</el-menu-item>
-    </el-menu>
-    <router-view></router-view> 
-   
+    <Header/>
   </div>
 </template>
 
 <script>
+import Header from "./views/layout/Header.vue"
 
 export default {
   name: "app",
-  components: {},
+  components: {
+    Header,
+  },
   methods: {}
 };
 </script>
@@ -31,8 +30,6 @@ html {
     font-family: "Avenir", Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
     height: 100%;
   }
 
@@ -42,7 +39,5 @@ html {
 
 }
 
-.el-menu.el-menu--horizontal {
-    border-bottom: none !important;
-}
+
 </style>

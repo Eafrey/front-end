@@ -1,6 +1,6 @@
 <template>
 <div class="container">
-    <editor v-model="editContent" previewStyle="vertical"/>
+    <editor v-model="editContent" previewStyle="vertical" class="editor"/>
     <viewer/>
 </div>
 </template>
@@ -13,6 +13,7 @@ import { Editor } from '@toast-ui/vue-editor'
 import 'tui-editor/dist/tui-editor-contents.css';
 import 'highlight.js/styles/github.css';
 import { Viewer } from '@toast-ui/vue-editor'
+
 export default {
     data() {
         return {
@@ -26,8 +27,12 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang='scss' scoped>
 .container {
     height: 100%;
+
+    .editor {
+        height: 100% !important;
+    }
 }
 </style>

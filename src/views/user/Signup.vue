@@ -137,7 +137,7 @@ export default {
 };
 </script>
 
-<style module>
+<style lang="scss" module>
 .basic-info {
   width: 60%;
   margin: 30px auto;
