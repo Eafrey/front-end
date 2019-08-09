@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { testApi } from "../api/user";
+import { testApi } from "@/api/user";
 
 export default {
   name: "Home",

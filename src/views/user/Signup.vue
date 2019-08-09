@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { addUser } from "../../api/user";
+import { addUser } from "@/api/user";
 
 export default {
   name: "Signup",
