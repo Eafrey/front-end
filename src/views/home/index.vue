@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import { testApi } from "@/api/user";
+import { testApi } from "@/api/testApi";
 
 export default {
   name: "Home",
@@ -34,7 +34,6 @@ export default {
     // background-image: url(../assets/background.jpg);
     // background-repeat: no-repeat;
     // background-size: cover;
-    background-color: $background-color-base;
     // height: 100%;
 
     .debug-info {

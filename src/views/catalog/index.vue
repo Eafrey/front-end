@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class='container'>
         catalog
     </div>
 </template>
@@ -11,6 +11,6 @@ export default {
 </script>
 
 <style lang="scss">
-
+   
 </style>
 

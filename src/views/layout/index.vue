@@ -8,7 +8,7 @@
             class="menu-bar" 
             background-color="#FFF" 
             mode="horizontal" 
-            router=true 
+            :router=true
             text-color='#303133'
             active-text-color="FFF">
             <el-menu-item index="/home">主页</el-menu-item>
@@ -21,39 +21,40 @@
     </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .container {
   height: 100%;
   display: flex;
   flex-direction: column;
-  
-  .header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 60px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      background-color: white;
-      z-index: $header-z-index;
-      border-bottom: solid 1px $border-color-base;
 
-      .title {
-          text-align: left;
-          font-weight: 600;
-          color: $color-text-primary;
-          font-size: 32px;
-          margin-left: 20px;
-          flex-grow: 1;
-          font-weight: 500;
-      }
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    z-index: $header-z-index;
+    border-bottom: solid 1px $border-color-base;
+
+    .title {
+      text-align: left;
+      font-weight: 600;
+      color: $color-text-primary;
+      font-size: 24px;
+      margin-left: 20px;
+      flex-grow: 1;
+      font-weight: 500;
+    }
   }
 
   .content {
-      margin-top: 60px;
-      flex-grow: 1;
+    margin-top: 60px;
+    flex-grow: 1;
+    background-color: $background-color-base;
   }
 }
 </style>
