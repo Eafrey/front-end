@@ -1,6 +1,6 @@
 <template>
     <div :class='$style.container'>
-        <el-card :class="$style['article-card']" :key="article.id" v-for="article in articles">
+        <Card :class="$style['article-card']" :key="article.id" v-for="article in articles">
             <div slot="header" class="clearfix">
                 <div :class="$style['article-header1']">
                     <span :class="$style['article-title']">{{ article.title }}</span>
@@ -15,8 +15,8 @@
             <div :class="$style['article-content']">
                 {{ `${article.content.substring(0, 100)}...` }}
             </div>
-        </el-card>
-        <el-pagination :class='$style.pagination'
+        </Card>
+        <Pagination :class='$style.pagination'
             v-if="totalPages>1"
             background
             layout="prev, pager, next"
@@ -24,16 +24,23 @@
             :page-count="totalPages"
             :page-size="pageSize"
             @current-change="onChangeCurrent">
-        </el-pagination>
+        </Pagination>
     </div>
 </template>
 
 <script>
 import {getArticles} from "@/api/articles.js"
 import Tag from "@/components/Tag";
+import { Card, Pagination } from 'element-ui';
+import * as Vue from "vue";
+Vue.use(Pagination)
 
 export default {
-    components: {Tag},
+    components: {
+        Tag,
+        Card,
+        Pagination
+    },
     data() {
         return {
             articles: [],
