@@ -3,6 +3,7 @@ import Vue from "vue";
 
 Vue.use(Router);
 
+const Layout = () => import(/* webpackChunkName: "layout" */ '@/views/layout')
 const Home = () => import(/* webpackChunkName: "home" */ '@/views/home')
 const Articles = () => import(/* webpackChunkName: "articles" */ '@/views/articles')
 const Catalog = () => import(/* webpackChunkName: "catalog" */ '@/views/catalog')
@@ -16,14 +17,22 @@ export default new Router({
     mode: "history",
     base: process.env.BASE_URL,
     routes: [
-        {path: "/home", name: "home", component: Home},
-        {path: "/articles", name: "articles", component: Articles},
-        {path: "/catalog", name: "catalog", component: Catalog},
-        {path: "/about", name: "about", component: About},
+        {
+            path: "",
+            name: "layout",
+            component: Layout,
+            redirect: 'home',
+            children: [
+                {path: "home", name: "home", component: Home},
+                {path: "articles", name: "articles", component: Articles},
+                {path: "catalog", name: "catalog", component: Catalog},
+                {path: "about", name: "about", component: About},
+            ]
+        },
 
-        {path: "/create", name: "create", component: CreateArticle},
+        {path: "create", name: "create", component: CreateArticle},
 
-        {path: "/signup", name: "signup", component: Signup},
-        {path: "/login", name: "login", component: Login},
+        {path: "signup", name: "signup", component: Signup},
+        {path: "login", name: "login", component: Login},
     ]
 });
