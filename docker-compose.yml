@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  front-end:
+    build: .
+    restart: always
+    hostname: eafrey-front
+    container_name: front-end
+    ports:
+      - 3000:80
