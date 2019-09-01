@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <div class='debug-info'>
-        <Button @click=testEafreyCN>testApi</Button>
+        <Button @click=testEafreyCN1>testApi</Button>
         <div>{{ testContent }}</div>
     </div>
 </div>
